@@ -49,9 +49,10 @@ Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests o
 - Versão 1.0 (09/12/2022): Modelagem do banco de dados (José João)
 - Versão 1.1 (15/12/2022): Adição de informações sobre a utilização das informações capturadas pelo CRM (José João)
 
-## Segue abaixo cronograma de tarefas:
+## Segue abaixo cronograma de tarefas
 
 Semana 1:
+
 1. Criar tela de cadastro de empresas
 2. Criar tela de edição de empresas
 3. Criar tela de exclusão de empresas
