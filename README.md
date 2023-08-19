@@ -62,6 +62,7 @@ Semana 1:
 7. Criar tela de ordenação de empresas
 
 Semana 2:
+
 8. Criar tela de cadastro de colaboradores
 9. Criar tela de edição de colaboradores
 10. Criar tela de exclusão de colaboradores
@@ -71,6 +72,7 @@ Semana 2:
 14. Criar tela de ordenação de colaboradores
 
 Semana 3:
+
 15. Criar tela de cadastro de clientes
 16. Criar tela de edição de clientes
 17. Criar tela de exclusão de clientes
@@ -80,6 +82,7 @@ Semana 3:
 21. Criar tela de ordenação de clientes
 
 Semana 4:
+
 22. Criar tela de cadastro de oportunidades de negócio
 23. Criar tela de edição de oportunidades de negócio
 24. Criar tela de exclusão de oportunidades de negócio
@@ -89,6 +92,7 @@ Semana 4:
 28. Criar tela de ordenação de oportunidades de negócio
 
 Semana 5:
+
 29. Criar tela de cadastro de produtos
 30. Criar tela de edição de produtos
 31. Criar tela de exclusão de produtos
@@ -97,6 +101,7 @@ Semana 5:
 34. Criar tela de filtro de produtos
 
 Semana 6:
+
 35. Criar tela de ordenação de produtos
 36. Criar tela de cadastro de atividades
 37. Criar tela de edição de atividades
@@ -107,17 +112,21 @@ Semana 6:
 42. Criar tela de ordenação de atividades
 
 Semana 7:
+
 43. Implementar o método Kanban para gerenciamento de tarefas
 44. Criar tela de login para acesso ao sistema
 45. Criar tela de recuperação de senha
 
 Semana 8:
+
 46. Implementar sistema de permissões de acesso para diferentes usuários
 47. Implementar sistema de notificações para alertar sobre novas atividades ou atualizações
 
 Semana 9:
+
 48. Implementar sistema de relatórios para análise de desempenho do negócio
 49. Implementar sistema de integração com outras ferramentas de gestão
 
 Semana 10:
+
 50. Realizar testes de usabilidade e correção de bugs.
