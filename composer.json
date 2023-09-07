@@ -1,0 +1,16 @@
+{
+    "name": "runner/crm2023",
+    "description": "sistema crm em php",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Runner\\Crm2023\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aloisio"
+        }
+    ],
+    "require": {}
+}
