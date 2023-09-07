@@ -12,5 +12,6 @@
             "name": "Aloisio"
         }
     ],
-    "require": {}
+    "require": {},
+    "test": "vendor/bin/phpunit",
 }
