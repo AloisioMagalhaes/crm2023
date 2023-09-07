@@ -2,6 +2,7 @@
     "name": "runner/crm2023",
     "description": "sistema crm em php",
     "type": "project",
+  "license": "MIT",
     "autoload": {
         "psr-4": {
             "Runner\\Crm2023\\": "src/"
