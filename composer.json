@@ -2,7 +2,7 @@
     "name": "runner/crm2023",
     "description": "sistema crm em php",
     "type": "project",
-  "license": "MIT",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Runner\\Crm2023\\": "src/"
@@ -10,11 +10,12 @@
     },
     "authors": [
         {
-            "name": "Aloisio"
+            "name": "AloisioMagalhães",
+            "email": "educacao1ouro@gmail.com"
         }
     ],
-    "require": {},
-  "require-dev": {
-    "phpunit/phpunit": "^9.5"
-}
+    "minimum-stability": "dev",
+    "require": {"php":"^8.0"},
+    "require-dev": {"phpunit/phpunit": "^9.5"},
+    "scripts": {"serve": "php -S localhost:8000 -t src/"}
 }
