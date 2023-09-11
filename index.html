@@ -323,9 +323,9 @@
     }
 
     .connect-sorting .add-s-task {
-      transition: all 0.3s ease-out;
       -webkit-transition: all 0.3s ease-out;
       text-align: center;
+      transition: all 0.3s ease-out;
     }
 
     .connect-sorting .add-s-task:hover {
@@ -629,11 +629,11 @@
 
     @keyframes progress-bar-stripes {
       0% {
-        background-position: 1rem 0;
+        transform: translate(0, 0);
       }
 
       100% {
-        background-position: 0 0;
+        transform: translate(1rem, 0);
       }
     }
   </style>
@@ -664,8 +664,7 @@
                     In Progress
                   </h6>
                   <div class="dropdown">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="true">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="This is a dropdown link">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-more-horizontal">

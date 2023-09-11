@@ -2,11 +2,10 @@
 require('../vendor/autoload.php');
 require_once('../index.html');
 header('Content-Language: pt-BR');
-header('Content-Type: text/html; charset=UTF-8');
+header('Content-Type: text/html; charset=UTF-8;');
 header('X-XSS-Protection: 1; mode=block');
-header('Cache-Control: stale-while-revalidate=259200');
-header('X-Frame-Options: DENY');
-header('Strict-Transport-Security: max-age=31536000');
+header('Cache-Control: no-cache');
+header('X-Frame-Options: SAMEORIGIN');
 header('X-UA-Compatible: IE=edge,chrome=1');
 header('X-Robots-Tag: noindex');
 header('X-Download-Options: noopen');
