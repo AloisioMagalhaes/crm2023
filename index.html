@@ -334,7 +334,7 @@
       transform: translateY(-3px);
     }
 
-    .connect-sorting .add-s-task .addTask {
+    .connect-sorting .add-s-task .add-task {
       display: block;
       color: #3b3f5c;
       font-size: 13px;
@@ -344,11 +344,11 @@
       cursor: pointer;
     }
 
-    .connect-sorting .add-s-task .addTask:hover {
+    .connect-sorting .add-s-task .add-task:hover {
       color: #4361ee;
     }
 
-    .connect-sorting .add-s-task .addTask svg {
+    .connect-sorting .add-s-task .add-task svg {
       width: 16px;
       height: 16px;
       vertical-align: text-top;
@@ -690,7 +690,7 @@
                   <!-- SCRUMBOARD CARD FIM -->
                   <!--SCRUMBOARD ADD-CARD INICIO-->
                   <div class="add-s-task">
-                    <a class="addTask">
+                    <a class="add-task">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-plus-circle">
@@ -759,14 +759,14 @@
       // It shows the modal with the id "addTaskModal".
       // It calls the function "_taskAdd" with the argument "getParentElement".
       function addTask() {
-        $('.addTask').on('click', function (event) {
+        $('.add-task').on('click', function (event) {
           event.preventDefault();
           getParentElement = $(this).parents('[data-connect="sorting"]').attr('data-section');
           $('.edit-task-title').hide();
           $('.add-task-title').show();
           $('[data-btnfn="addTask"]').show();
           $('[data-btnfn="editTask"]').hide();
-          // $('.addTaskAccordion .collapse').collapse('hide');
+          // $('.add-task-accordion .collapse').collapse('hide');
           $('#addTaskModal').modal('show');
           $_taskAdd(getParentElement);
         });
