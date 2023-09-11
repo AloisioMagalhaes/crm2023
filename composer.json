@@ -17,5 +17,7 @@
     "minimum-stability": "dev",
     "require": {"php":"^8.0"},
     "require-dev": {"phpunit/phpunit": "^9.5"},
-    "scripts": {"serve": "php -S localhost:8000 -t src/"}
+    "scripts": {
+        "serve": "php -S localhost:8000 -t src/",
+        "test": "vendor/bin/phpunit"}
 }
