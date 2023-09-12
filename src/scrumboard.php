@@ -1,4 +1,3 @@
-<template>
     <!-- Contêiner para uma lista de tarefas -->
     <div data-section="s-approved" class="task-list-container" data-connect="sorting">
 
@@ -17,7 +16,7 @@
                 <div class="dropdown">
 
                     <!-- Ícone do menu suspenso -->
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="This is a dropdown menu">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
                             <circle cx="12" cy="12" r="1" />
                             <circle cx="19" cy="12" r="1" />
@@ -58,7 +57,6 @@
 
     </div>
 
-</template>
 <?php
 $icon_menu = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>';
 $icon_calendario = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
@@ -67,174 +65,4 @@ $icon_lapis = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" vi
 ';
 $icon_lixeira = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2 s-task-delete"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
 ';
-?>
-<?php
-class Task
-{
-    private $title;
-
-    public function __construct($title)
-    {
-        $this->title = $title;
-    }
-
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    public function setTitle($title)
-    {
-        $this->title = $title;
-    }
-}
-
-class TaskListContainer
-{
-    private $title;
-    private $tasks;
-
-    public function __construct()
-    {
-        $this->title = "New";
-        $this->tasks = [];
-    }
-
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    public function setTitle($title)
-    {
-        $this->title = $title;
-    }
-
-    public function getTasks()
-    {
-        return $this->tasks;
-    }
-
-    public function setTasks($tasks)
-    {
-        $this->tasks = $tasks;
-    }
-
-    public function render()
-    {
-    return ("
-      <div>
-        <TaskListHeader title={this->title} />
-        <TaskListContent tasks={this->tasks} />
-        <TaskListAddButton />
-      </div>
-    ");
-    }
-}
-
-class TaskListHeader
-{
-    private $title;
-    private $onTitleChange;
-
-    public function __construct(
-        $title,
-        callable $onTitleChange
-    ) {
-        $this->title = $title;
-        $this->onTitleChange = $onTitleChange;
-    }
-
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    public function setTitle($title)
-    {
-        $this->title = $title;
-    }
-
-    public function getOnTitleChange()
-    {
-        return $this->onTitleChange;
-    }
-
-    public function setOnTitleChange($onTitleChange)
-    {
-        $this->onTitleChange = $onTitleChange;
-    }
-
-    public function render()
-    {
-    return ("<div>
-        <h6>{this->title}</h6>
-        <button onClick={this->onTitleChange}>Edit</button>
-      </div>
-    ");
-    }
-}
-
-class TaskListContent
-{
-    private $tasks;
-
-    public function __construct($tasks)
-    {
-        $this->tasks = $tasks;
-    }
-
-    public function getTasks()
-    {
-        return $this->tasks;
-    }
-
-    public function setTasks($tasks)
-    {
-        $this->tasks = $tasks;
-    }
-
-    public function render()
-    {
-    return ('
-      <ul>
-        {this->tasks->map(function($task) {
-          return "<li key={task->id}>{task->title}</li>";
-        })}
-      </ul>
-    ');
-    }
-}
-
-class TaskListAddButton
-{
-    public function render()
-    {
-        return ("
-      <button>
-        Add Task
-      </button>
-    ");
-    }
-}
-
-function main()
-{
-    $taskList = new TaskListContainer();
-    $taskList->setTitle("My Tasks");
-
-    $task1 = new Task("Task 1");
-    //$task1->setTitle("Task 1");
-
-    $task2 = new Task("Task 2");
-    //$task2->setTitle("Task 2");
-
-    $taskList->setTasks([$task1, $task2]);
-
-    echo $taskList->render();
-}
-
-main();
-
-
 ?>
