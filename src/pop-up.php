@@ -74,6 +74,7 @@
 
     </div>
 </template>
+
 <template>
     <!-- Modal fade -->
     <div class="modal fade" id="addListModal" tabindex="-1" role="dialog" aria-labelledby="addListModalTitle" aria-hidden="true">
@@ -147,6 +148,7 @@
     </div>
 
 </template>
+
 <template>
     <!-- Modal fade -->
     <div class="modal fade" id="deleteConformation" tabindex="-1" role="dialog" aria-labelledby="deleteConformationLabel" aria-hidden="true">

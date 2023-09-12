@@ -14,10 +14,11 @@
             "email": "educacao1ouro@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {"php":"^8.0"},
+    "minimum-stability": "stable",
+    "require": {"php":"^8.0",
+        "pbergman/fifo": "dev-master"},
     "require-dev": {"phpunit/phpunit": "^9.5"},
     "scripts": {
-        "serve": "php -S localhost:8000 -t ./src",
+        "serve": "php ./serve.php",
         "test": "vendor/bin/phpunit"}
 }
