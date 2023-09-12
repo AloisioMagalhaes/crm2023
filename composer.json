@@ -1,24 +1,29 @@
 {
-    "name": "runner/crm2023",
-    "description": "sistema crm em php",
-    "type": "project",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Runner\\Crm2023\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "AloisioMagalhães",
-            "email": "educacao1ouro@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {"php":"^8.0",
-        "pbergman/fifo": "dev-master"},
-    "require-dev": {"phpunit/phpunit": "^9.5"},
-    "scripts": {
-        "serve": "php -S localhost:8000 -t ./src/",
-        "test": "vendor/bin/phpunit"}
+  "name": "runner/crm2023",
+  "description": "sistema crm em php",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Runner\\Crm2023\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "AloisioMagalhães",
+      "email": "educacao1ouro@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.0",
+    "pbergman/fifo": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "scripts": {
+    "serve": "php -S localhost:8000 -t ./src/",
+    "test": "vendor/bin/phpunit"
+  }
 }
