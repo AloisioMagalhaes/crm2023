@@ -1,6 +1,6 @@
-run = "php -S 0.0.0.0:8000 -t ./src"
+run = "php -S 0.0.0.0:8000 -t ."
 
-entrypoint = "index.php"
+entrypoint = "serve.php"
 
 [nix]
 channel = "stable-22_11"
