@@ -156,7 +156,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <p class="">If you delete the task it will be gone forever. Are you sure you
+                                <p >If you delete the task it will be gone forever. Are you sure you
                                     want to proceed?</p>
                             </div>
                             <div class="modal-footer">
