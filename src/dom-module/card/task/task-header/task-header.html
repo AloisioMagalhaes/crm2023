@@ -1,0 +1,64 @@
+<link rel="import" href="header-title.html">
+<link rel="import" href="task-edit-icon.html">
+
+<dom-module id="task-header">
+    <template>
+        <div class="task-header">
+            <div>
+                <task-title></task-title>
+            </div>
+
+            <div>
+                <task-edit-icon></task-edit-icon>
+            </div>
+        </div>
+    </template>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'http://127.0.0.1:3000/src/dom-module/card/task/task-header/header-title.html');
+        xhr.send();
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                const taskTitleHtml = xhr.responseText;
+                const taskTitleElement = document.createElement('task-title');
+                document.body.appendChild(taskTitleElement);
+
+                taskTitleElement.setAttribute('data-taskTitle', 'Launch New SEO Wordpress Theme');
+
+                // Inserir o conteúdo dinamicamente no slot do web component DOM-module
+                taskTitleElement.querySelector('slot').textContent = 'Launch New SEO Wordpress Theme';
+            }
+        };
+
+    </script>
+    <script>/*
+    class MyTaskTitle extends HTMLElement {
+        constructor() {
+            super();
+            const shadowRoot = this.attachShadow({
+                mode: 'open'
+            });
+            const template = document.getElementById('my-task-title-template');
+            const instance = template.content.cloneNode(true);
+            shadowRoot.appendChild(instance);
+
+            // Crie um observador para o elemento `h4`
+            this.observer = new MutationObserver((mutations) => {
+                // Atualize o conteúdo do elemento `h4`
+                const taskTitle = this.shadowRoot.querySelector('#task-title').getAttribute('data-taskTitle');
+                this.shadowRoot.querySelector('#task-title').textContent = taskTitle;
+            });
+
+            // Observe o elemento `h4`
+            this.observer.observe(this.shadowRoot.querySelector('#task-title'), {
+                attributes: true,
+            });
+        }
+    }
+
+    customElements.define('my-task-title', MyTaskTitle);
+*/</script>
+</dom-module>
+
+<task-header></task-header>

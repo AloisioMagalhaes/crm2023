@@ -1,0 +1,30 @@
+<dom-module id="task-title">
+    <template>
+        <h4 data-taskTitle="">
+            <slot></slot>
+        </h4>
+    </template>
+    <script>
+        class TaskTitle extends HTMLElement {
+            constructor() {
+                super();
+
+                const observer = new MutationObserver((mutations) => {
+                    const taskTitle = this.getAttribute('data-taskTitle');
+                    this.querySelector('h4').textContent = taskTitle;
+                });
+
+                observer.observe(this, {
+                    attributes: true,
+                });
+            }
+        }
+
+        customElements.define('task-title', TaskTitle);
+
+    </script>
+</dom-module>
+<!-- 
+<task-title>oi</task-title>
+-->
+<task-title data-taskTitle="oi"></task-title>

@@ -1,0 +1,38 @@
+<dom-module id="add-task">
+    <!-- Define the custom element -->
+    <template id="add-task-button-template">
+        <div class="add-s-task">
+            <a class="addTask">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-plus-circle">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 8v8m-4-4h8" />
+                </svg>
+                Add Task
+            </a>
+        </div>
+    </template>
+
+    <script>
+        // Define the behavior for the custom element
+        class AddTaskButton extends HTMLElement {
+            constructor() {
+                super();
+                const shadowRoot = this.attachShadow({
+                    mode: 'open'
+                });
+                const template = document.getElementById('add-task-button-template');
+                const instance = template.content.cloneNode(true);
+                const addButton = instance.querySelector('.addTask');
+                addButton.addEventListener('click', () => console.log('Add Task clicked'));
+                shadowRoot.appendChild(instance);
+            }
+        }
+        // Register the custom element
+        customElements.define('add-task-button', AddTaskButton);
+    </script>
+</dom-module>
+<!-- tag para usar webcomponent em html
+<add-task-button></add-task-button>
+-->
