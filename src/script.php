@@ -1,4 +1,4 @@
-<script>
+<script async>
     //------padStart
     if (!String.prototype.padStart) {
         String.prototype.padStart = function (targetLength, padString) {
@@ -16,7 +16,7 @@
     }
 </script>
 
-<script>
+<script async>
     //----------------Scroll To Top
     const scrollTopButton = document.querySelector('.scrollTop');
     const notificationDropdownMenu = document.querySelector(
@@ -123,7 +123,7 @@
     }
 </script>
 
-<script>
+<script async>
     //------perfect-scrollbar
     ! function (t, e) {
         "object" == typeof exports && "undefined" != typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define(e) : t.PerfectScrollbar = e()
@@ -640,7 +640,7 @@
         }, H
     });
 </script>
-<script>
+<script async>
     //-----------ScrumBoard
     const Container = {
         scrumboard: document.querySelector('.scrumboard'),
@@ -723,21 +723,21 @@
         const taskText = document.getElementById('s-text').value;
         const taskProgress = document.querySelector('.range-count-number').getAttribute('data-rangeCountNumber');
         const html = `
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title">${task}</h3>
-      </div>
-      <div class="card-body">
-        <p class="card-text">${taskText}</p>
-      </div>
-      <div class="card-footer">
-        <span class="text-muted">${today}</span>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: ${taskProgress}%" aria-valuenow="${taskProgress}" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-      </div>
-    </div>
-  `;
+            <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">${task}</h3>
+            </div>
+            <div class="card-body">
+                <p class="card-text">${taskText}</p>
+            </div>
+            <div class="card-footer">
+                <span class="text-muted">${today}</span>
+                <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: ${taskProgress}%" aria-valuenow="${taskProgress}" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            </div>
+        `;
         document.querySelector(`[data-section='` + getParent + `'] .connect-sorting-content`).append(html);
         event.preventDefault();
         document.getElementById('addTaskModal').modal('hide');
@@ -1144,4 +1144,4 @@
 
     }();
 </script>
-<script>$(document).ready(async function () { App.init() }());</script>
+<script async>$(document).ready(async function () { App.init() }());</script>
